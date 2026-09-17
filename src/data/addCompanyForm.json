@@ -1,0 +1,1089 @@
+{
+  "formName": "Add Company",
+  "sections": [
+    {
+      "title": "Company Details",
+      "fields": [
+        {
+          "name": "companyCode",
+          "label": "Company Code",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Company Code"
+        },
+        {
+          "name": "name",
+          "label": "Company Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter Company Name"
+        },
+        {
+          "name": "formalName",
+          "label": "Formal Name",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Formal Name"
+        },
+        {
+          "isVisible": true,
+          "name": "website",
+          "label": "Website",
+          "type": "url",
+          "required": true,
+          "placeholder": "Enter Website"
+        },
+        {
+          "name": "essWebsite",
+          "label": "ESS Website",
+          "isVisible": true,
+          "type": "url",
+          "required": true,
+          "placeholder": "Enter ESS Website"
+        },
+        {
+          "name": "source",
+          "label": "Source",
+          "type": "select",
+          "required": false,
+          "isVisible": false,
+          "options": ["--Select--"]
+        },
+        {
+          "name": "sourcingType",
+          "label": "Sourcing Type",
+          "type": "select",
+          "isVisible": false,
+          "required": false,
+          "options": ["--Sourcing Type--"]
+        },
+        {
+          "name": "clientType",
+          "label": "Client Type",
+          "type": "select",
+          "required": false,
+          "isVisible": false,
+          "options": ["All"]
+        },
+        {
+          "name": "maxFiles",
+          "label": "Payroll Input Max Files allowed",
+          "type": "number",
+          "isVisible": false,
+          "required": false,
+          "placeholder": "Enter Payroll Input Max Files allowed"
+        },
+        {
+          "name": "business",
+          "label": "Business",
+          "isVisible": true,
+          "type": "select",
+          "required": true,
+          "options": ["--Select--", "IT", "ITES", "NonIT"]
+        },
+        {
+          "name": "sisterCompany",
+          "label": "Sister Company",
+          "type": "select",
+          "isVisible": false,
+          "required": false,
+          "options": ["--Select--"]
+        },
+        {
+          "name": "shortName",
+          "label": "Short Name",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Short Name"
+        },
+        {
+          "name": "postedBy",
+          "label": "Posted By",
+          "isVisible": false,
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Posted By"
+        },
+        {
+          "name": "department",
+          "label": "Department",
+          "type": "text",
+          "isVisible": false,
+          "required": false,
+          "placeholder": "Enter Department"
+        },
+        {
+          "name": "designation",
+          "isVisible": false,
+          "label": "Designation",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Designation"
+        },
+        {
+          "name": "revenue",
+          "label": "Revenue",
+          "type": "select",
+          "isVisible": false,
+          "required": false,
+          "options": ["--Select--"]
+        },
+        {
+          "name": "reputation",
+          "label": "Reputation",
+          "type": "select",
+          "isVisible": true,
+          "required": true,
+          "options": ["--Select--"]
+        },
+        {
+          "name": "datePosted",
+          "label": "Date Posted",
+          "type": "date",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Date Posted"
+        },
+        {
+          "isVisible": true,
+          "name": "status",
+          "label": "Status",
+          "type": "select",
+          "required": true,
+          "options": ["--Status--"]
+        },
+        {
+          "name": "employees",
+          "label": "Employees",
+          "type": "number",
+          "isVisible": false,
+          "required": false,
+          "placeholder": "Enter Employees"
+        },
+        {
+          "name": "ccEmailAlert",
+          "label": "CC Email Alert",
+          "type": "email",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter CC Email Alert"
+        },
+        {
+          "name": "companyFileName",
+          "label": "Company File Name",
+          "type": "text",
+          "isVisible": true,
+          "required": true,
+          "placeholder": "Enter Company File Name"
+        },
+        {
+          "name": "queryMailid",
+          "label": "Query Mailid",
+          "type": "email",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Query Mailid"
+        },
+        {
+          "name": "width",
+          "isVisible": false,
+          "label": "Width",
+          "type": "number",
+          "required": false,
+          "placeholder": "Enter Width"
+        },
+        {
+          "isVisible": false,
+          "name": "height",
+          "label": "Height",
+          "type": "number",
+          "required": false,
+          "placeholder": "Enter Height"
+        },
+        {
+          "isVisible": false,
+          "name": "otherName",
+          "label": "Company Other Name",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Company Other Name"
+        }
+      ]
+    },
+    {
+      "title": "Address Company",
+      "fields": [
+        {
+          "name": "address1",
+          "label": "Address 1",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter Address 1"
+        },
+
+        {
+          "name": "address2",
+          "label": "Address 2",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Address 2"
+        },
+        {
+          "name": "address3",
+          "label": "Address 3",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Address 3"
+        },
+
+        {
+          "name": "address4",
+          "label": "Address 4",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Address 4"
+        },
+        {
+          "name": "address5",
+          "label": "Address 5",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter Address 5"
+        },
+
+        {
+          "name": "country",
+          "label": "Country",
+          "type": "select",
+          "required": true,
+          "options": []
+        },
+        {
+          "name": "state",
+          "label": "State",
+          "type": "select",
+          "required": true,
+          "options": []
+        },
+        {
+          "name": "city",
+          "label": "City",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter City"
+        },
+        {
+          "name": "postalCode",
+          "label": "Postal Code",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter Postal Code"
+        }
+      ]
+    },
+    {
+      "title": "Phone Company",
+      "fields": [
+        {
+          "name": "businessArea",
+          "label": "Business Area",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Business Area"
+        },
+        {
+          "name": "businessNumber",
+          "label": "Business Number",
+          "type": "number",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Business Number"
+        },
+        {
+          "name": "faxArea",
+          "label": "Fax Area",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Fax Area"
+        },
+        {
+          "name": "faxNumber",
+          "label": "Fax Number",
+          "type": "number",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Fax Number"
+        },
+        {
+          "name": "emailInfo",
+          "label": "Email Info",
+          "type": "email",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Email Info"
+        },
+        {
+          "name": "emailSupport",
+          "label": "Email Support",
+          "type": "email",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Email Support"
+        }
+      ]
+    },
+    {
+      "title": "Contact Person",
+      "fields": [
+        {
+          "name": "salutation",
+          "label": "Salutation",
+          "type": "select",
+          "required": true,
+          "isVisible": true,
+          "options": ["--Select--"]
+        },
+        {
+          "name": "firstName",
+          "label": "First Name",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter first name"
+        },
+        {
+          "name": "contactDesignation",
+          "label": "Designation",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "name": "lastName",
+          "label": "Last Name",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter last name"
+        },
+        {
+          "name": "contactDepartment",
+          "label": "Department",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter department"
+        }
+      ]
+    },
+    {
+      "title": "Contact Phone",
+      "fields": [
+        {
+          "name": "contactBusinessArea",
+          "label": "Business Area",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Business Area"
+        },
+        {
+          "name": "contactBusinessNumber",
+          "label": "Business Number",
+          "type": "number",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Business Number"
+        },
+        {
+          "name": "mobileArea",
+          "label": "Mobile Area",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Mobile Area"
+        },
+        {
+          "name": "mobileNumber",
+          "label": "Mobile Number",
+          "type": "number",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Mobile Number"
+        },
+        {
+          "name": "businessEmail",
+          "label": "Business Email",
+          "type": "email",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Business Email"
+        }
+      ]
+    },
+    {
+      "title": "TDS Details (Enter the details of the person responsible for deduction of tax)",
+      "fields": [
+        {
+          "name": "panGir",
+          "label": "PAN/GIR No",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter PAN/GIR No"
+        },
+        {
+          "name": "tdsFullName",
+          "label": "Full Name",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Full Name"
+        },
+        {
+          "name": "fatherName",
+          "label": "Father Name",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Father Name"
+        },
+        {
+          "name": "tdsEmail",
+          "label": "Email",
+          "type": "email",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Email"
+        },
+        {
+          "name": "tdsMobile",
+          "label": "Mobile No.",
+          "type": "number",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Mobile No."
+        },
+        {
+          "name": "tanNo",
+          "label": "TAN No",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter TAN No"
+        },
+        {
+          "name": "tdsDesignation",
+          "label": "Designation",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Designation"
+        },
+        {
+          "name": "tdsPhone",
+          "label": "Phone No.",
+          "type": "number",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Phone No."
+        },
+        {
+          "name": "tdsPlace",
+          "label": "Place",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Place"
+        },
+        {
+          "name": "asmtRange",
+          "label": "Asmt. Range",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Asmt. Range"
+        }
+      ]
+    },
+    {
+      "title": "CIT (TDS) Address",
+      "fields": [
+        {
+          "name": "citName",
+          "label": "CIT Name",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter CIT Name"
+        },
+        {
+          "name": "citAddress1",
+          "label": "Address1",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Address1"
+        },
+        {
+          "name": "citAddress2",
+          "label": "Address2",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Address2"
+        },
+        {
+          "name": "citCity",
+          "label": "City",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter City"
+        },
+        {
+          "name": "citPin",
+          "label": "PIN",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter PIN"
+        }
+      ]
+    },
+    {
+      "title": "Tax Consultant Employee",
+      "fields": [
+        {
+          "name": "incomeTaxConsultant",
+          "label": "Enable income tax calculation for consultant employees",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "ptConsultant",
+          "label": "Enable PT calculation for consultant employees",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "consultantRate",
+          "label": "Consultant Rate %",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Consultant Rate %"
+        }
+      ]
+    },
+    {
+      "title": "SBI Account Details",
+      "fields": [
+        {
+          "name": "sbiAccount",
+          "label": "SBI Account No",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter SBI Account No"
+        },
+        {
+          "name": "sbiReference",
+          "label": "SBI Reference Number",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter SBI Reference Number"
+        },
+        {
+          "name": "sbiCode",
+          "label": "SBI Code",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter SBI Code"
+        }
+      ]
+    },
+    {
+      "title": "Invoice Details",
+      "fields": [
+        {
+          "name": "vatTin",
+          "label": "Company VAT TIN",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Company VAT TIN"
+        },
+        {
+          "name": "neft",
+          "label": "NEFT/RTGS No.",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter NEFT/RTGS No."
+        },
+        {
+          "name": "branch",
+          "label": "Branch",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Branch"
+        },
+        {
+          "name": "serviceTax",
+          "label": "Service Tax No.",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Service Tax No."
+        },
+        {
+          "name": "accountNumber",
+          "label": "A/C Number No.",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter A/C Number No."
+        },
+        {
+          "name": "bankName",
+          "label": "Bank Name",
+          "type": "text",
+          "required": false,
+          "isVisible": false,
+          "placeholder": "Enter Bank Name"
+        }
+      ]
+    },
+    {
+      "title": "Preference, Permission and Alert Options",
+      "fields": [
+        {
+          "name": "alertHr",
+          "label": "Send email alert to HR",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "essEmployees",
+          "label": "Enable ESS Website For Employees",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "payslipReimbursement",
+          "label": "Payslip to come with Reimbursement",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "pfMonthlyReport",
+          "label": "Can only generate PF monthly report, if payroll is locked, salary processed and PF TAT is set",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "excessClaim",
+          "label": "Allow reimbursement excess transaction claim posting",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "onboardingMandatory",
+          "label": "Consider OnBoarding Group Mandatory for onboarding",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "duplicateBank",
+          "label": "Companywise bank Duplicate Account Number Check",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "lifa",
+          "label": "LIFA Enabled",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "bulkApproval",
+          "label": "Leave Bulk Approval",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "changeWorkflow",
+          "label": "Enable employee change request workflow",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "employeeUsername",
+          "label": "Employee No. as Username",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "subclientPayslip",
+          "label": "Display subclient logo and address in payslip",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "secondLevelAuth",
+          "label": "Consider for second level password authentication",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "payrollMigration",
+          "label": "Payroll Migration",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "salaryReimbursement",
+          "label": "Generate Salary Statement with reimbursement",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "varthanaPms",
+          "label": "Varthana PMS",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "itVouching",
+          "label": "Enable IT Vouching",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        }
+      ]
+    },
+    {
+      "title": "Attachment Limit",
+      "fields": [
+        {
+          "name": "hrmsMaxFiles",
+          "label": "HRMS forms max files",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter HRMS forms max files"
+        },
+        {
+          "name": "documentMaxFiles",
+          "label": "Document center max files",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Document center max files"
+        },
+        {
+          "name": "bulletinMaxFiles",
+          "label": "Bulletin board max files",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Bulletin board max files"
+        },
+        {
+          "name": "preOnboardingSize",
+          "label": "Pre Onboarding attachment size",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Pre Onboarding attachment size"
+        },
+        {
+          "name": "hrmsMaxSize",
+          "label": "Max size limit (Kbs)",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter HRMS max size"
+        },
+        {
+          "name": "documentMaxSize",
+          "label": "Max size limit (Kbs)",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Document max size"
+        },
+        {
+          "name": "bulletinMaxSize",
+          "label": "Max size limit (Kbs)",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Bulletin max size"
+        }
+      ]
+    },
+    {
+      "title": "CTC Component",
+      "fields": [
+        {
+          "name": "ctcComponent",
+          "label": "CTC Component",
+          "type": "select",
+          "required": false,
+          "isVisible": true,
+          "options": ["--Select--"]
+        }
+      ]
+    },
+    {
+      "title": "Leave, Attendance and Permission Configuration",
+      "fields": [
+        {
+          "name": "permissionMonth",
+          "label": "Permission per Month",
+          "type": "number",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Permission per Month"
+        },
+        {
+          "name": "leaveCutOff",
+          "label": "Leave Cut Off Days",
+          "type": "number",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Leave Cut Off Days"
+        },
+        {
+          "name": "permissionHours",
+          "label": "Permission Hours per Month",
+          "type": "number",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Permission Hours per Month"
+        }
+      ]
+    },
+    {
+      "title": "Challan Upload Cut Off",
+      "fields": [
+        {
+          "name": "challanCutOff",
+          "label": "Challan Upload Cut Off Date",
+          "type": "date",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Challan Upload Cut Off Date"
+        }
+      ]
+    },
+    {
+      "title": "PF Details",
+      "fields": [
+        {
+          "name": "pfAccount",
+          "label": "PF Account No",
+          "type": "text",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF Account No"
+        },
+        {
+          "name": "pfDeduction",
+          "label": "PF % Deduction",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF % Deduction"
+        },
+        {
+          "name": "pfAdmin",
+          "label": "PF Admin %",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF Admin %"
+        },
+        {
+          "name": "edliAdmin",
+          "label": "EDLI Admin%",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter EDLI Admin%"
+        },
+        {
+          "name": "autoPf",
+          "label": "Auto Generate Employee PF No",
+          "type": "checkbox",
+          "required": false,
+          "isVisible": true
+        },
+        {
+          "name": "pfBase",
+          "label": "PF Base Limit",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF Base Limit"
+        },
+        {
+          "name": "eps",
+          "label": "EPS",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter EPS"
+        },
+        {
+          "name": "pf",
+          "label": "PF",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF"
+        },
+        {
+          "name": "edli",
+          "label": "% of EDLI",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter % of EDLI"
+        },
+        {
+          "name": "pfCode",
+          "label": "PF Establishment Code",
+          "type": "text",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF Establishment Code"
+        },
+        {
+          "name": "pfId",
+          "label": "PF Establishment Id",
+          "type": "text",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter PF Establishment Id"
+        }
+      ]
+    },
+    {
+      "title": "ESIC Details (Enter the details of the person responsible for ESIC deduction)",
+      "fields": [
+        {
+          "name": "esicAccount",
+          "label": "ESIC Account No",
+          "type": "text",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter ESIC Account No"
+        },
+        {
+          "name": "esicDeduction",
+          "label": "ESIC Deduction",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter ESIC Deduction"
+        },
+        {
+          "name": "esicName",
+          "label": "Full Name",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Full Name"
+        },
+        {
+          "name": "esicPlace",
+          "label": "Place",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Place"
+        },
+        {
+          "name": "esicLimit",
+          "label": "ESIC Cut Off Limit",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter ESIC Cut Off Limit"
+        },
+        {
+          "name": "esicContribution",
+          "label": "Contribution",
+          "type": "number",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter Contribution"
+        },
+        {
+          "name": "esicDesignation",
+          "label": "Designation",
+          "type": "text",
+          "required": true,
+          "isVisible": true,
+          "placeholder": "Enter Designation"
+        }
+      ]
+    },
+    {
+      "title": "About Company (Minimum 150 characters)",
+      "fields": [
+        {
+          "name": "AboutCompany",
+          "label": "About Company (Minimum 150 characters)",
+          "type": "textarea",
+          "required": false,
+          "isVisible": true,
+          "minLength": 150,
+          "placeholder": "Enter company description"
+        }
+      ]
+    },
+    {
+      "title": "Comments",
+      "fields": [
+        {
+          "name": "Comments",
+          "label": "Comments",
+          "type": "textarea",
+          "required": false,
+          "isVisible": true,
+          "placeholder": "Enter comments"
+        }
+      ]
+    }
+  ]
+}

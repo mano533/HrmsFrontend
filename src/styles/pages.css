@@ -1,0 +1,596 @@
+/* =========================================================
+   Company List Page
+   ========================================================= */
+
+.company-list-page {
+  min-height: calc(100vh - 80px);
+  padding: 24px 22px;
+  background: var(--background);
+  color: var(--text-dark);
+}
+
+.company-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.company-list-heading h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.company-list-heading p {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   Company List Panel
+   ========================================================= */
+
+.company-list-panel {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-form-panel {
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.company-form-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.company-form-heading p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.company-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  align-items: end;
+}
+
+.company-form .required-asterisk {
+  color: var(--danger);
+}
+
+.company-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.company-form .ant-space-vertical {
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .company-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .company-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Company List Toolbar
+   ========================================================= */
+
+.company-list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--surface);
+}
+
+.company-list-toolbar strong {
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+.company-list-toolbar .ant-space-vertical {
+  width: min(320px, 45%);
+}
+
+.company-list-toolbar .ant-input {
+  height: 36px;
+  border-color: var(--border-medium);
+  border-radius: var(--radius-sm);
+}
+
+.company-list-toolbar .ant-input:hover,
+.company-list-toolbar .ant-input:focus {
+  border-color: var(--brand-teal);
+}
+
+/* =========================================================
+   Company Table
+   ========================================================= */
+
+.company-list-table-wrap {
+  overflow-x: auto;
+}
+
+.company-list-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.company-list-table th {
+  padding: 12px 10px;
+  border-right: 1px solid var(--border-light);
+  background: var(--surface-soft);
+  color: var(--text-primary);
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.company-list-table th:last-child {
+  border-right: 0;
+}
+
+.company-list-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.company-list-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.company-list-table tbody tr:nth-child(even) {
+  background: #fafcfd;
+}
+
+.company-list-table tbody tr:hover {
+  background: #f0fdfa;
+}
+
+.company-list-table td:nth-child(3) {
+  color: var(--brand-teal);
+  font-weight: 500;
+}
+
+.company-list-empty {
+  padding: 25px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* =========================================================
+   Full Company Form
+   ========================================================= */
+
+.company-full-form {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-form-intro {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 18px;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.company-form-intro span {
+  color: var(--text-muted);
+}
+
+.company-form-section {
+  border-top: 1px solid var(--border-light);
+}
+
+.company-form-section h3 {
+  margin: 0;
+  padding: 11px 14px;
+  background: var(--surface-soft);
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 600;
+  border-left: 3px solid var(--brand-teal);
+}
+
+.company-form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 16px 20px;
+}
+
+.company-form-column {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.company-form-column label {
+  display: grid;
+  grid-template-columns: minmax(150px, 42%) 1fr;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.company-form-column label .ant-space-vertical {
+  width: 100%;
+}
+
+.company-form-column label select {
+  width: 100%;
+  height: 34px;
+  border: 1px solid var(--border-medium);
+  border-radius: 6px;
+  padding: 0 8px;
+  color: var(--text-primary);
+  background: var(--surface);
+  outline: none;
+}
+
+.company-form-column label select:hover,
+.company-form-column label select:focus {
+  border-color: var(--brand-teal);
+}
+
+.company-form-column .company-checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.company-form-column .company-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--brand-teal);
+}
+
+.company-text-section textarea {
+  display: block;
+  width: calc(100% - 28px);
+  min-height: 100px;
+  margin: 0 14px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: 6px;
+  padding: 10px;
+  color: var(--text-primary);
+  background: var(--surface);
+  resize: vertical;
+  outline: none;
+}
+
+.company-text-section textarea:hover,
+.company-text-section textarea:focus {
+  border-color: var(--brand-teal);
+}
+
+.company-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px;
+  border-top: 1px solid var(--border-light);
+  background: var(--surface-soft);
+}
+
+@media (max-width: 850px) {
+  .company-form-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .company-form-column label {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .company-form-intro {
+    display: block;
+  }
+}
+
+/* =========================================================
+   DynamicForm Company Fields
+   Three controls per row
+   ========================================================= */
+
+.company-form-columns {
+  display: block;
+}
+
+.company-form-column {
+  display: block;
+}
+
+.company-form-column label {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.company-form-column .ant-form-item {
+  margin-bottom: 10px;
+}
+
+.company-form-column .ant-form-item-control-input,
+.company-form-column .ant-space-vertical,
+.company-form-column .ant-input,
+.company-form-column .ant-input-number,
+.company-form-column .ant-select {
+  width: 100%;
+}
+
+.company-form-column .ant-input-number {
+  min-width: 100%;
+}
+
+.company-form-column .ant-input:focus,
+.company-form-column .ant-input-number:focus,
+.company-form-column .ant-input-number-focused,
+.company-form-column .ant-select-focused .ant-select-selector {
+  border-color: var(--brand-teal) !important;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.08) !important;
+}
+
+@media (max-width: 850px) {
+  .company-form-column .ant-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 560px) {
+  .company-form-column .ant-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   Shared Feature Card Hover
+   ========================================================= */
+
+.feature-card {
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  background: var(--brand-teal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card:hover strong,
+.feature-card:hover p,
+.feature-card:hover b {
+  color: var(--brand-teal) !important;
+}
+
+/* =========================================================
+   Deputed Company Page
+   ========================================================= */
+
+.deputed-company-page {
+  min-height: calc(100vh - 80px);
+  padding: 24px 22px 40px;
+  background: var(--background);
+  color: var(--text-dark);
+}
+
+.deputed-company-heading h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.deputed-company-heading p {
+  margin: 6px 0 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   Deputed Company Tabs
+   ========================================================= */
+
+.deputed-company-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* =========================================================
+   Deputed Company Panel
+   ========================================================= */
+
+.deputed-company-panel {
+  min-height: 430px;
+  border: 1px solid var(--border-light);
+  border-top: 0;
+  background: var(--surface);
+}
+
+.deputed-company-panel h2 {
+  margin: 0;
+  padding: 11px 14px;
+  background: var(--surface-soft);
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 600;
+  border-left: 3px solid var(--brand-teal);
+}
+
+.deputed-company-panel .ant-row {
+  padding: 0;
+}
+
+.deputed-company-panel .p-2 {
+  padding: 0 !important;
+}
+
+/* =========================================================
+   Deputed Form
+   ========================================================= */
+
+.deputed-form-row {
+  padding: 16px 24px !important;
+  width: 100% !important;
+}
+
+.deputed-form-row .ant-form-item,
+.deputed-form-row .ant-form-item-control,
+.deputed-form-row .ant-form-item-control-input,
+.deputed-form-row .ant-form-item-control-input-content,
+.deputed-form-row .ant-form-item-control-input-content > div {
+  width: 100% !important;
+}
+
+.deputed-form-row .ant-form-item,
+.deputed-form-row .ant-form-item-control,
+.deputed-form-row .ant-form-item-control-input,
+.deputed-form-row .ant-form-item-control-input-content {
+  display: block;
+  flex: 1 1 auto;
+}
+
+.deputed-form-row .ant-input,
+.deputed-form-row .ant-input-affix-wrapper,
+.deputed-form-row .ant-input-number,
+.deputed-form-row .ant-select,
+.deputed-form-row .ant-select-selector,
+.deputed-form-row .ant-upload-wrapper {
+  width: 100% !important;
+}
+
+.deputed-form-row .ant-form-item-control-input-content > div > input,
+.deputed-form-row .ant-form-item-control-input-content > div > textarea,
+.deputed-form-row
+  .ant-form-item-control-input-content
+  > div
+  > .ant-input-number,
+.deputed-form-row .ant-form-item-control-input-content > div > .ant-select {
+  width: 100% !important;
+}
+
+.deputed-form-group .ant-form-item-control,
+.deputed-form-group .ant-form-item-control-input,
+.deputed-form-group .ant-form-item-control-input-content,
+.deputed-form-group .ant-form-item-control-input-content > div {
+  width: 100%;
+}
+
+.deputed-form-group label {
+  white-space: nowrap;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.deputed-company-panel .ant-form-item {
+  margin-bottom: 0;
+}
+
+/* Focus states */
+
+.deputed-company-panel .ant-input:focus,
+.deputed-company-panel .ant-input-affix-wrapper-focused,
+.deputed-company-panel .ant-input-number-focused,
+.deputed-company-panel .ant-select-focused .ant-select-selector {
+  border-color: var(--brand-teal) !important;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.08) !important;
+}
+
+/* =========================================================
+   Deputed Company Actions
+   ========================================================= */
+
+.deputed-company-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 22px;
+  border-top: 1px solid var(--border-light);
+  background: var(--surface-soft);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .deputed-company-panel .ant-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .deputed-company-actions {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .deputed-company-panel .ant-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .deputed-form-group .ant-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .deputed-company-tabs {
+    overflow-x: auto;
+  }
+}

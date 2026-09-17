@@ -1,0 +1,1018 @@
+{
+  "roles": ["Super Admin", "Admin", "Employee", "Manager", "HR"],
+  "loginFormFields": [
+    {
+      "id": 1,
+      "name": "username",
+      "label": "User Name",
+      "value": "",
+      "type": "text",
+      "isError": false,
+      "options": [],
+      "isMandatory": true,
+      "placeholder": "you@company.com",
+      "regexType": "",
+      "maxLength": 150,
+      "isDisabled": false,
+      "columnSpace": 24
+    },
+    {
+      "id": 2,
+      "name": "password",
+      "label": "Password",
+      "value": "",
+      "type": "password",
+      "isError": false,
+      "options": [],
+      "isMandatory": true,
+      "placeholder": "Enter your password",
+      "maxLength": 100,
+      "isDisabled": false,
+      "columnSpace": 24
+    }
+  ],
+  "users": [
+    {
+      "username": "employee@solohrms.com",
+      "password": "Employee@123",
+      "role": "Employee",
+      "name": "Mano Marappan"
+    },
+    {
+      "username": "admin@solohrms.com",
+      "password": "Admin@123",
+      "role": "Admin",
+      "name": "TeamSoft"
+    },
+    {
+      "username": "superadmin@solohrms.com",
+      "password": "SuperAdmin@123",
+      "role": "Super Admin",
+      "name": "TeamSoft"
+    },
+    {
+      "username": "manager@solohrms.com",
+      "password": "Manager@123",
+      "role": "Manager",
+      "name": "TeamSoft"
+    }
+  ],
+  "employeeNavigation": [
+    {
+      "key": "Dashboard",
+      "label": "Dashboard",
+      "icon": "DashboardOutlined"
+    },
+    {
+      "key": "My Profile",
+      "label": "My Profile",
+      "icon": "UserOutlined"
+    },
+    {
+      "key": "Attendance",
+      "label": "Attendance",
+      "icon": "ClockCircleOutlined"
+    },
+    {
+      "key": "Leave",
+      "label": "Leave",
+      "icon": "CalendarOutlined"
+    },
+    {
+      "key": "Payroll",
+      "label": "Payroll",
+      "icon": "DollarOutlined"
+    },
+    {
+      "key": "Performance",
+      "label": "Performance",
+      "icon": "TrophyOutlined"
+    },
+    {
+      "key": "Documents",
+      "label": "Documents",
+      "icon": "FileTextOutlined"
+    },
+
+    {
+      "key": "Resignation",
+      "label": "Resignation",
+      "icon": "LogoutOutlined"
+    },
+
+    {
+      "key": "Settings",
+      "label": "Settings",
+      "icon": "SettingOutlined"
+    }
+  ],
+  "administrationNavigation": [
+    {
+      "key": "Dashboard",
+      "label": "Dashboard",
+      "icon": "DashboardOutlined"
+    },
+    {
+      "key": "Employees",
+      "label": "Employees",
+      "icon": "TeamOutlined",
+      "children": [
+        {
+          "key": "Employee List",
+          "label": "Employee List"
+        },
+        {
+          "key": "Add Employee",
+          "label": "Add Employee"
+        },
+        {
+          "key": "Employee Directory",
+          "label": "Employee Directory"
+        },
+        {
+          "key": "Departments",
+          "label": "Departments"
+        },
+        {
+          "key": "Designations",
+          "label": "Designations"
+        }
+      ]
+    },
+    {
+      "key": "Onboarding",
+      "label": "Onboarding",
+      "icon": "UserAddOutlined",
+      "children": [
+        {
+          "key": "New Joiners",
+          "label": "New Joiners"
+        },
+        {
+          "key": "Onboarding Checklist",
+          "label": "Onboarding Checklist"
+        },
+        {
+          "key": "Onboarding Tasks",
+          "label": "Onboarding Tasks"
+        },
+        {
+          "key": "Document Collection",
+          "label": "Document Collection"
+        },
+        {
+          "key": "Onboarding Status",
+          "label": "Onboarding Status"
+        }
+      ]
+    }
+  ],
+  "employeeDetailsMenu": [
+    {
+      "label": "Basic Details",
+      "expandable": true,
+      "children": [
+        "Address",
+        "Basic Information",
+        "Family Details",
+        "Passport Details",
+        "Visa Details",
+        "Personal Details",
+        "Languages Known",
+        "Health Details",
+        "Brief Information"
+      ]
+    },
+    {
+      "label": "Work Details",
+      "expandable": true,
+      "children": [
+        "Bank Details",
+        "PF Details",
+        "Exit Process Feedback",
+        "Insurance Details",
+        "Joining Details",
+        "Nomination",
+        "Project Details",
+        "Recruitment Details",
+        "References",
+        "Reporting Manager",
+        "Resignation Details",
+        "Rewards",
+        "Skill Set",
+        "Document Manager",
+        "Asset Info",
+        "Workflow Delegates",
+        "Absconding Details",
+        "Deputation Details",
+        "PMS Reporting Manager"
+      ]
+    },
+    {
+      "label": "Career Details",
+      "expandable": true,
+      "children": [
+        "Appraisals",
+        "Career History",
+        "Career Status",
+        "Certifications",
+        "Contract Details",
+        "Overseas Experience",
+        "Previous Employment",
+        "Qualification"
+      ]
+    },
+    {
+      "label": "Salary Information",
+      "expandable": true,
+      "children": [
+        "Salary Card",
+        "Salary Advance",
+        "Salary Statement",
+        "Do Not Consider Payroll",
+        "IT Sheet",
+        "PO Status",
+        "Download Payroll Documents",
+        "Payroll Activity Checklist",
+        "Resigned Employees",
+        "Final Settlement",
+        "Employee Settled",
+        "Employee Resettlement",
+        "Stop Payment",
+        "Employee Leave Encashment",
+        "Employee LOP Days",
+        "Employee Arrears",
+        "Employee Day Arrears",
+        "Employee Enabled IT Declaration",
+        "Employee IT Declaration",
+        "Employee Actual IT Declaration",
+        "Employee IT Proof Validation",
+        "Employee IT Proof Review",
+        "Negative Salary Employees",
+        "Import",
+        "Approved Reimbursement Claims",
+        "Employee IT Adjustment",
+        "Employee Multiple Challan",
+        "Upload Tracers",
+        "Merge Tracer and Form 16",
+        "Merit Increment Letter",
+        "Payroll Customs Report"
+      ]
+    },
+    {
+      "label": "Flexi Compensation",
+      "expandable": true,
+      "children": [
+        "Allocation Import",
+        "Allocation Report",
+        "Allocation Own car Report",
+        "Approved/Rejected Reimbursement Claim"
+      ]
+    },
+    "CTC Business Report",
+    "SBU Report",
+    "NFI Report",
+    { "label": "Statutory Upload", "expandable": true, "children": [] },
+    { "label": "Custom Reports", "expandable": true, "children": [] },
+    { "label": "Employee Self Service", "expandable": true, "children": [] },
+    { "label": "Financial Details", "expandable": true, "children": [] },
+    {
+      "label": "Attendance Details",
+      "expandable": true,
+      "children": [
+        "Attendance Exception",
+        "Attendance Info",
+        "Copy Shift Roster Info",
+        "Employee Shift Assignment",
+        "Shift Schedule",
+        "Swipe Details",
+        "View Swipe Info - Team",
+        "View Shift Info - Team",
+        "View Attendance Info - Team",
+        "Monthly Export Attendance",
+        "View Monthly Attendance",
+        "Attendance Regularization -Approve",
+        "Multiple employee swipe between dates",
+        "Employee Attendance Generation",
+        "Employee Attendance LOP"
+      ]
+    }
+  ],
+  "purchaseOrderMenu": [
+    "Request New PO",
+    "Add New Requested PO",
+    "PO Analysis"
+  ],
+  "employeeDashboard": {
+    "brand": { "logo": "e", "name": "emanage" },
+    "greeting": "Good afternoon",
+    "navIcons": ["⌂", "⌒", "▦", "♧", "▣", "♙", "⌁", "▤", "▱", "▱", "⚙"],
+    "shortcuts": ["▤", "⌒", "▦", "ⓘ"],
+    "company": {
+      "logo": "LOGO",
+      "name": "Datacore Technologies",
+      "subtitle": "Pvt. Ltd."
+    },
+    "toolbar": {
+      "tab": "Personal",
+      "shift": "General Shift (09:30 AM – 06:30 PM) · 2026 DOL"
+    },
+    "dutyTitle": "Duty overview",
+    "dutyModes": ["On Duty", "Finance"],
+    "years": ["2026", "2025"],
+    "months": ["Aug", "Jul", "Jun"],
+    "dutyStats": [
+      { "value": "8", "label": "WORKED DAYS", "color": "worked" },
+      { "value": "0", "label": "PENDING LEAVES", "color": "pending" },
+      { "value": "0", "label": "APPROVED LEAVES", "color": "approved" },
+      { "value": "0", "label": "MISSED SWIPES", "color": "missed" }
+    ],
+    "people": {
+      "Birthdays": [
+        { "name": "Vikram A", "subtitle": "Software Development – GEC" }
+      ],
+      "Anniversaries": [],
+      "New Joinees": []
+    }
+  },
+  "superAdminNavigation": {
+    "main": ["Administration", "Task", "Reports", "System"],
+    "administrationChildren": ["Manage", "Employee Details", "Purchase Order"],
+    "taskChildren": [
+      "Pending Items",
+      "Monitor Workflow Items",
+      "Post Trouble Ticket",
+      "Post Reimbursement Claim",
+      "Post Product Query"
+    ],
+    "reportsChildren": [
+      "Payroll Reports Gallery",
+      "HR Reports Gallery",
+      "Trouble Ticket Gallery",
+      "Product Query Gallery",
+      "Payroll Differences",
+      "Employee Letter",
+      "Employee Leave Reports",
+      "Attendance Reports Gallery",
+      "User Login History",
+      "PMS Report Gallery",
+      "Timesheet Management Reports",
+      "Separation Reports Gallery",
+      "Mail log Gallery",
+      "Usage Report",
+      "IT Validation Report"
+    ],
+    "systemChildren": [
+      {
+        "label": "List of Values",
+        "url": "https://emanageinvocie.alpdcore.com/SystemListofValues.aspx?id=0.2",
+        "children": [
+          "Personal",
+          "Transitions",
+          "Separation Module",
+          "Job Related",
+          "Others",
+          "Travel",
+          "Payroll Configuration"
+        ]
+      },
+      {
+        "label": "Settings",
+        "url": "https://emanageinvocie.alpdcore.com/SystemSettings.aspx?id=0.3"
+      },
+      {
+        "label": "Configure",
+        "url": "https://emanageinvocie.alpdcore.com/SystemConfigure.aspx?id=0.4"
+      },
+      {
+        "label": "Leave",
+        "url": "https://emanageinvocie.alpdcore.com/SystemLeave.aspx?id=0.5"
+      },
+      {
+        "label": "Attendance",
+        "url": "https://emanageinvocie.alpdcore.com/Homeattendanceoptions.aspx?id=0.7"
+      },
+      {
+        "label": "Export Bank Statement",
+        "url": "https://emanageinvocie.alpdcore.com/LoadExportBankStatement.aspx?id=0.6"
+      },
+      {
+        "label": "Employee",
+        "url": "https://emanageinvocie.alpdcore.com/HomeEmployeeoptions.aspx?id=0.8"
+      },
+      {
+        "label": "Maintenance",
+        "url": "https://emanageinvocie.alpdcore.com/AdminManageMaintenance.aspx?id=0.9"
+      },
+      {
+        "label": "Timesheet Management",
+        "url": "https://emanageinvocie.alpdcore.com/HomeTimeSheetManagement.aspx?id=0.10"
+      },
+      {
+        "label": "Training Module",
+        "url": "https://emanageinvocie.alpdcore.com/HomeTrainingModule.aspx?id=0.11"
+      },
+      {
+        "label": "Invoice Module",
+        "url": "https://emanageinvocie.alpdcore.com/HomeInvoiceModule.aspx?id=0.12"
+      }
+    ]
+  },
+  "superAdminDashboard": {
+    "userName": "Manoj T",
+    "lastLogin": "13 Aug 2025, 1:27 PM",
+    "metrics": [
+      {
+        "label": "Total Employees",
+        "value": "256",
+        "icon": "people",
+        "color": "blue",
+        "action": "View all"
+      },
+      {
+        "label": "Pending Tasks",
+        "value": "12",
+        "icon": "tasks",
+        "color": "green",
+        "action": "View all"
+      },
+      {
+        "label": "Payroll This Month",
+        "value": "INR 28,45,000",
+        "icon": "rupee",
+        "color": "purple",
+        "action": "View details"
+      },
+      {
+        "label": "Notifications",
+        "value": "5",
+        "icon": "bell",
+        "color": "orange",
+        "action": "View all"
+      }
+    ],
+    "quickAccess": [
+      {
+        "title": "Company, HO Client, Deputed Client and Payroll Setup",
+        "description": "Manage company, HO, client and payroll configurations.",
+        "icon": "building",
+        "color": "blue"
+      },
+      {
+        "title": "Add/Update Employee Information",
+        "description": "Add new employees and update employee details.",
+        "icon": "person",
+        "color": "green"
+      },
+      {
+        "title": "Create New Payroll Month",
+        "description": "Create and manage payroll months.",
+        "icon": "calendar",
+        "color": "purple"
+      },
+      {
+        "title": "Update Salary Information",
+        "description": "Update and manage employee salary details.",
+        "icon": "money",
+        "color": "orange"
+      },
+      {
+        "title": "Payroll Processing Checklist",
+        "description": "Complete checklist before payroll processing.",
+        "icon": "checklist",
+        "color": "cyan"
+      },
+      {
+        "title": "Purchase Order",
+        "description": "Create and manage purchase orders.",
+        "icon": "cart",
+        "color": "pink"
+      },
+      {
+        "title": "Payroll Process",
+        "description": "Process payroll and generate payroll summary.",
+        "icon": "process",
+        "color": "cyan"
+      },
+      {
+        "title": "Manage Invoice",
+        "description": "Create, manage and track invoices.",
+        "icon": "invoice",
+        "color": "pink"
+      },
+      {
+        "title": "Print the Salary Statement",
+        "description": "Print salary statements for employees.",
+        "icon": "print",
+        "color": "blue"
+      },
+      {
+        "title": "Bank Transfers, Cheques & Cash Disbursement",
+        "description": "Manage payments via bank transfers, cheques and cash.",
+        "icon": "bank",
+        "color": "purple"
+      },
+      {
+        "title": "Print Statutory & Other Reports",
+        "description": "Print statutory and other important reports.",
+        "icon": "report",
+        "color": "orange"
+      },
+      {
+        "title": "View On Boarding, F & F, PO, Invoice, HO Agreement and Payroll Activities Alerts",
+        "description": "View alerts and notifications.",
+        "icon": "screen",
+        "color": "green"
+      }
+    ]
+  },
+  "superAdminAdministration": {
+    "metrics": [
+      {
+        "label": "Total Employees",
+        "value": "256",
+        "icon": "people",
+        "color": "blue"
+      },
+      {
+        "label": "Active Employees",
+        "value": "198",
+        "icon": "people",
+        "color": "green"
+      },
+      {
+        "label": "Pending Leaves",
+        "value": "12",
+        "icon": "calendar",
+        "color": "orange"
+      },
+      {
+        "label": "Payroll This Month",
+        "value": "INR 28,45,000",
+        "icon": "rupee",
+        "color": "purple"
+      },
+      { "label": "Alerts", "value": "5", "icon": "bell", "color": "teal" }
+    ],
+    "featureCards": [
+      {
+        "title": "Manage",
+        "description": "Manage company, employees, organizational, attendances details etc.",
+        "icon": "building",
+        "color": "blue"
+      },
+      {
+        "title": "Employee Details",
+        "description": "View employee's basic, work, career, leave, payroll details.",
+        "icon": "people",
+        "color": "green"
+      },
+      {
+        "title": "Purchase Order",
+        "description": "Request new PO, add new requested PO, PO analysis.",
+        "icon": "cart",
+        "color": "orange"
+      },
+      {
+        "title": "Travel & Expense Claim Tracker",
+        "description": "Manage travel and expense claims and reimbursements.",
+        "icon": "plane",
+        "color": "purple"
+      },
+      {
+        "title": "Attendance Tracker",
+        "description": "Track attendance, leaves, overtime and shift details.",
+        "icon": "calendar",
+        "color": "teal"
+      },
+      {
+        "title": "Reports & Analytics",
+        "description": "View and analyze HR & payroll reports.",
+        "icon": "analytics",
+        "color": "pink"
+      },
+      {
+        "title": "Email Alert Configuration",
+        "description": "Configure email templates and alert notifications.",
+        "icon": "mail",
+        "color": "orange"
+      },
+      {
+        "title": "Bank Advice & Payments",
+        "description": "Manage bank advice, transfers, cheques & cash.",
+        "icon": "bank",
+        "color": "blue"
+      },
+      {
+        "title": "System Administration",
+        "description": "Manage system settings, roles, permissions & more.",
+        "icon": "settings",
+        "color": "purple"
+      }
+    ]
+  },
+  "superAdminTask": {
+    "metrics": [
+      {
+        "label": "Pending Items",
+        "value": "18",
+        "icon": "checklist",
+        "color": "blue"
+      },
+      {
+        "label": "Monitor Workflow Items",
+        "value": "32",
+        "icon": "workflow",
+        "color": "green"
+      },
+      {
+        "label": "Trouble Tickets",
+        "value": "7",
+        "icon": "ticket",
+        "color": "orange"
+      },
+      {
+        "label": "Reimbursement Claims",
+        "value": "11",
+        "icon": "money",
+        "color": "purple"
+      },
+      {
+        "label": "Product Queries",
+        "value": "5",
+        "icon": "chat",
+        "color": "teal"
+      }
+    ],
+    "featureCards": [
+      {
+        "title": "Pending Items",
+        "description": "View pending workflow items that require your action.",
+        "icon": "key",
+        "color": "blue"
+      },
+      {
+        "title": "Monitor Workflow Items",
+        "description": "View and monitor all workflow items by employee or date.",
+        "icon": "workflow",
+        "color": "green"
+      },
+      {
+        "title": "Post Trouble Ticket",
+        "description": "Post trouble ticket behalf of employee.",
+        "icon": "ticket",
+        "color": "orange"
+      },
+      {
+        "title": "Post Reimbursement Claim",
+        "description": "Reimbursement claim behalf of employee.",
+        "icon": "wallet",
+        "color": "purple"
+      },
+      {
+        "title": "Post Product Query",
+        "description": "Product Query.",
+        "icon": "chat",
+        "color": "teal"
+      }
+    ]
+  },
+  "manageTree": [
+    {
+      "label": "Company",
+      "children": [
+        "New Company",
+        "Company List",
+        "Company E-Mail Configuration",
+        "Company E-Mail Template Configuration",
+        "Company Alert E-Mail Template Configuration"
+      ]
+    },
+    { "label": "Deputied Client", "children": ["New Deputed Company"] },
+    {
+      "label": "Employee",
+      "children": [
+        "Request For Pre Onboarding",
+        "On Boarding List",
+        "New Employee",
+        "Employee List",
+        "Change Employee Number",
+        "Transfer Employee",
+        "Employee Checklist",
+        "Bulletin Board",
+        "ESS Alert",
+        "HRMS Forms",
+        "Document Center",
+        "Employee Suggestions",
+        "PAN Validator",
+        "HR Query Builder",
+        "Asset Query Builder",
+        "New Joinee Report",
+        "ESIC Report",
+        "PF Bulk Export",
+        {
+          "label": "Employee Confirmation Details",
+          "children": [
+            "Employee Confirmation-Approve",
+            "Confirmation Details Reports"
+          ]
+        },
+        "Travel and Expense Claim Tracker",
+        "Organization Tree"
+      ]
+    },
+    {
+      "label": "Leave",
+      "children": [
+        "Employees On Leave",
+        "Leave Summary",
+        "Leave Granter",
+        "Consolidated Leave Report",
+        "Year End Processing"
+      ]
+    },
+    {
+      "label": "Attendance",
+      "children": [
+        "Shifts",
+        "Production Plan",
+        "Production Plan Shift Assignment",
+        "Manual Swipe Entry",
+        "Mass Manual Swipe Entry",
+        "Download Swipe Entry",
+        "Attendance Processor",
+        "Detailed Attendance Report For ALP"
+      ]
+    },
+    {
+      "label": "Bank Advice",
+      "children": [
+        "Trouble Ticket Reviewers",
+        "Product Reviewers",
+        "Email Alert Reviewers",
+        "Email Alert Reviewers-Deputed Company",
+        "Reimbursement Reviewers"
+      ]
+    },
+    { "label": "HR Inputs", "children": [] },
+    { "label": "Payroll", "children": [] },
+    {
+      "label": "User",
+      "children": ["Register User", "User List", "Statutory User List"]
+    },
+    {
+      "label": "Separation Module",
+      "children": [
+        "Checklist Trigger",
+        "Submit Resignation By HR",
+        "Resigned Employees",
+        "Departmentwise Checklist Mapping",
+        "Manager Checklist Mapping",
+        "Employee Department Checklist Summary",
+        "Manager Checklist Summary",
+        "Department Mapping List",
+        "Attrition Report",
+        "Separation Module report"
+      ]
+    },
+    {
+      "label": "Performance Management System",
+      "children": [
+        "Shortlist Employee",
+        "Shortlisted Employee",
+        "Import PMS Goals - Employee Wise",
+        "Import KRA / KPI",
+        "KRA / KPI",
+        "Reviewer Approval",
+        "PMS HR Approval",
+        "PMS Appraisals",
+        {
+          "label": "Employee Assessment",
+          "children": ["Appraisee", "Appraiser", "Reviewer"]
+        }
+      ]
+    },
+    { "label": "Salary Invoice", "children": ["Alerts", "Sub Asset Type"] },
+    { "label": "Statutory Compliance", "children": [] }
+  ],
+  "companyList": [
+    {
+      "name": "AAA Aviation Private Limited",
+      "code": "EN00001768",
+      "created": "28-Sep-2017",
+      "contact": "Sobin"
+    },
+    {
+      "name": "ABCD Company",
+      "code": "EN00001999",
+      "created": "23-Aug-2023",
+      "contact": "Roopa"
+    },
+    {
+      "name": "Abracon India Private Limited",
+      "code": "EN00002013",
+      "created": "12-Feb-2024",
+      "contact": "Christy"
+    },
+    {
+      "name": "Afri Ventures (India) Private Limited",
+      "code": "EN00002086",
+      "created": "16-Jun-2026",
+      "contact": "Laxmana Rao"
+    },
+    {
+      "name": "Agile Labs Pvt Ltd",
+      "code": "EN00001586",
+      "created": "21-Jul-2016",
+      "contact": "Padma"
+    },
+    {
+      "name": "AGNI MOTORS - Statutory",
+      "code": "EN00001760",
+      "created": "28-Jul-2017",
+      "contact": "ASHOK"
+    },
+    {
+      "name": "AgriGenome",
+      "code": "EN00001541",
+      "created": "27-Jan-2016",
+      "contact": "Balamani"
+    },
+    {
+      "name": "AIGUA",
+      "code": "EN00000480",
+      "created": "25-Jun-2015",
+      "contact": "Leena"
+    },
+    {
+      "name": "Ajmal Perfumes",
+      "code": "EN00001537",
+      "created": "07-Jan-2016",
+      "contact": "Ajmal"
+    },
+    {
+      "name": "Alp Consulting Lanka Pvt Ltd",
+      "code": "EN00002003",
+      "created": "19-Oct-2023",
+      "contact": "Rajkumar"
+    },
+    {
+      "name": "Alp Consulting Ltd",
+      "code": "EN00000037",
+      "created": "10-Feb-2011",
+      "contact": "Rakshitha"
+    }
+  ],
+
+  "requestPeronboardingfields": [
+    {
+      "name": "candidateFirstName",
+      "label": "Candidate First Name",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter Candidate First Name",
+      "columnSpace": "12"
+    },
+    {
+      "name": "candidateLastName",
+      "label": "Candidate Last Name",
+      "type": "text",
+      "required": false,
+      "placeholder": "Enter Candidate Last Name",
+      "columnSpace": "12"
+    },
+    {
+      "name": "candidateFullName",
+      "label": "Candidate Full Name",
+      "type": "text",
+      "required": false,
+      "placeholder": "Enter Candidate Full Name",
+      "columnSpace": "12"
+    },
+    {
+      "name": "candidateMobileNo",
+      "label": "Candidate Mobile No.",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter Mobile Number",
+      "columnSpace": "12"
+    },
+    {
+      "name": "candidateMailId",
+      "label": "Candidate Mail Id",
+      "type": "email",
+      "required": true,
+      "placeholder": "Enter Email Address",
+      "columnSpace": "12"
+    },
+    {
+      "name": "annualFixedCTC",
+      "label": "Annual Fixed CTC",
+      "type": "number",
+      "required": true,
+      "placeholder": "Enter Annual Fixed CTC",
+      "columnSpace": "12"
+    },
+    {
+      "name": "candidateType",
+      "label": "Candidate Type",
+      "type": "select",
+      "required": true,
+      "placeholder": "Select Candidate Type",
+      "options": ["Internal", "External"],
+      "columnSpace": "12"
+    },
+    {
+      "name": "grade",
+      "label": "Grade",
+      "type": "select",
+      "required": true,
+      "placeholder": "Select Grade",
+      "options": ["G1", "G2", "G3", "G4", "G5", "G6", "G7"],
+      "columnSpace": "12"
+    },
+    {
+      "name": "candidateJoiningDate",
+      "label": "Candidate Joining Date",
+      "type": "date",
+      "required": true,
+      "placeholder": "Select Joining Date",
+      "columnSpace": "12"
+    },
+    {
+      "name": "employeeType",
+      "label": "Employee Type",
+      "type": "select",
+      "required": false,
+      "placeholder": "Select Employee Type",
+      "options": ["Full Time", "Part Time", "Contract", "Intern"],
+      "columnSpace": "12"
+    },
+    {
+      "name": "designation",
+      "label": "Designation",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter Designation",
+      "columnSpace": "12"
+    },
+    {
+      "name": "department",
+      "label": "Department",
+      "type": "select",
+      "required": true,
+      "placeholder": "Select Department",
+      "options": [
+        "IT",
+        "Human Resources",
+        "Finance",
+        "Marketing",
+        "Design",
+        "Operations"
+      ],
+      "columnSpace": "12"
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter Location",
+      "columnSpace": "12"
+    },
+    {
+      "name": "state",
+      "label": "State",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter State",
+      "columnSpace": "12"
+    },
+    {
+      "name": "reportingManager",
+      "label": "Reporting Manager",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter Reporting Manager",
+      "columnSpace": "12"
+    }
+  ],
+
+  "PeronboardPersonalFromFields": [
+    {
+      "id": 1,
+      "name": "username",
+      "label": "User Name",
+      "value": "",
+      "type": "text",
+      "isError": false,
+      "options": [],
+      "isMandatory": true,
+      "placeholder": "you@company.com",
+      "regexType": "",
+      "maxLength": 150,
+      "isDisabled": false,
+      "columnSpace": 24
+    }
+  ]
+}

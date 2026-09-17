@@ -1,0 +1,112 @@
+:root {
+  /* =========================
+     Brand / Primary
+     ========================= */
+  --brand-teal: #122B45;
+  --brand-teal-dark: #071426;
+  --brand-teal-light: #59D8CC;
+
+  /* =========================
+     Sidebar
+     ========================= */
+  --sidebar-dark: #122B45;
+  --sidebar-hover: #1F5870;
+  --sidebar-active: #1F5870;
+  --sidebar-text: #F3F6FF;
+  --sidebar-muted: #A6B6C9;
+
+  /* =========================
+     Text
+     ========================= */
+  --text-dark: #122B45;
+  --text-primary: #122B45;
+  --text-muted: #6D8199;
+  --text-light: #A6B6C9;
+
+  /* =========================
+     Background / Surface
+     ========================= */
+  --background: #F4F8FC;
+  --surface: #FFFFFF;
+  --surface-soft: #EAF1F7;
+
+  /* =========================
+     Borders
+     ========================= */
+  --border-light: #D6E1EB;
+  --border-medium: #BFCFDE;
+
+  /* =========================
+     Status Colors
+     ========================= */
+  --success: #29B879;
+  --success-light: #E9FAF2;
+
+  --warning: #F39A2E;
+  --warning-light: #FFF4E6;
+
+  --danger: #E35D6A;
+  --danger-light: #FFF0F2;
+
+  --info: #2F80D7;
+  --info-light: #EDF5FF;
+
+  /* =========================
+     Accent
+     ========================= */
+  --accent-orange: #F39A2E;
+  --accent-orange-light: #FFF4E6;
+
+  /* =========================
+     Purple / Pending
+     ========================= */
+  --purple: #8057D8;
+  --purple-light: #F2EEFF;
+
+  /* =========================
+     Navbar
+     ========================= */
+  --navbar-bg: #FFFFFF;
+  --navbar-border: #E2E8F0;
+
+  /* =========================
+     Shadows
+     ========================= */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  /* =========================
+     Radius
+     ========================= */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  /*======================
+  Button
+  ====================*/
+  /* Primary button */
+  --btn-primary: #1F5870;
+  --btn-primary-hover: #17465B;
+  --btn-primary-active: #1F5870;
+  --btn-primary-text: #FFFFFF;
+
+  /* Disabled button */
+  --btn-disabled: #e5eae5;
+  --btn-disabled-text: #728078;
+
+  /* Secondary / Filter button */
+  /* Secondary button */
+  --btn-secondary: #fff3ed;
+  --btn-secondary-hover: #ffe4d6;
+  --btn-secondary-text: #c94312;
+  --btn-secondary-border: #ffd2bf;
+
+  /* Danger / Delete button */
+  --btn-danger: #fff1f1;
+  --btn-danger-text: #d64545;
+  --btn-danger-hover: #d64545;
+  --btn-danger-hover-text: #ffffff;
+}
