@@ -7,7 +7,7 @@ const field = (name, label, type = "text", isMandatory = false) => ({
   type,
   value: "",
   isMandatory,
-  columnSpace: 12,
+  columnSpace: 8,
   placeholder: `Enter ${label}`,
 });
 
@@ -20,6 +20,7 @@ const familyFields = [
   field("bloodGroup", "Blood Group"),
   field("profession", "Profession", "text", true),
   field("relationship", "Relationship", "text", true),
+  field("nominee", "Is Nominee", "checkbox", true),
 ];
 
 const nomineeFields = [

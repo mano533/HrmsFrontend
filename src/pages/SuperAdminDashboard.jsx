@@ -373,13 +373,13 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
           theme={{
             components: {
               Menu: {
-                itemColor: "#FFFFFF",
-                itemBg: "#123B4A",
+                itemColor: "#123B4A",
+                itemBg: "#FFFFFF",
                 itemHoverColor: "#10A6A0",
-                itemHoverBg: "#1C5363",
-                itemSelectedColor: "#FFFFFF",
-                itemSelectedBg: "#10A6A0",
-                subMenuItemBg: "#123B4A",
+                itemHoverBg: "#E6F7F5",
+                itemSelectedColor: "#10A6A0",
+                itemSelectedBg: "#E6F7F5",
+                subMenuItemBg: "#FFFFFF",
               },
             },
           }}

@@ -3054,11 +3054,12 @@ body {
 }
 .admin-sidebar .ant-menu,
 .admin-sidebar .ant-menu-sub {
-  background: #123b4a !important;
+  background: #ffffff !important;
 }
 .admin-sidebar .ant-menu-item,
 .admin-sidebar .ant-menu-submenu-title {
-  color: #ffffff !important;
+  color: #123b4a !important;
+  background: #ffffff !important;
 }
 .admin-sidebar .ant-menu-item:hover,
 .admin-sidebar .ant-menu-submenu-title:hover {
@@ -3073,8 +3074,8 @@ body {
   display: none;
 }
 .admin-sidebar .ant-menu-submenu-selected > .ant-menu-submenu-title {
-  background: #10a6a0 !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #123b4a !important;
 }
 .admin-sidebar .ant-menu-sub .ant-menu-item-selected {
   background: #1c5363 !important;
@@ -3128,8 +3129,8 @@ body {
 }
 
 .super-sidebar > .ant-menu .ant-menu-item-selected {
-  background: #10a6a0 !important;
-  color: #ffffff !important;
+  background: #e6f7f5 !important;
+  color: #10a6a0 !important;
 }
 
 .super-sidebar
@@ -3137,7 +3138,7 @@ body {
   .ant-menu-submenu-selected
   > .ant-menu-submenu-title {
   background: #e6f7f5 !important;
-  color: #123b4a !important;
+  color: #10a6a0 !important;
 }
 
 .super-tabs .ant-btn,
