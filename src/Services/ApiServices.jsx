@@ -1,45 +1,40 @@
 import axios from 'axios'
-import React from 'react'
-
+import { useCallback, useMemo } from 'react'
 function useApiServices() {
+    const api = useMemo(() => axios.create({
+        baseURL: import.meta.env.VITE_API_BASE_URL || "https://localhost:7151/api/"
+    }), [])
 
-    let urlENV = import.meta.env
-
-    let api = axios.create({
-        baseURL: urlENV
-    })
-
-    api.interceptors.request.use(
+    useMemo(() => api.interceptors.request.use(
         (config) => {
             const token = localStorage.getItem("token");
 
             if (token) {
                 config.headers.Authorization = `Bearer ${token}`;
             }
-
             return config;
         },
         (error) => {
             return Promise.reject(error);
 
-        })
+        }), [api])
 
-    const getApi = async () => {
+    const getApi = useCallback(async (url) => {
         const response = await api.get(url);
         return response.data;
-    }
+    }, [api]);
 
     // POST
-    const postApi = async (url, data) => {
+    const postApi = useCallback(async (url, data) => {
         const response = await api.post(url, data);
         return response.data;
-    };
+    }, [api]);
 
     // DELETE
-    const deleteApi = async (url) => {
+    const deleteApi = useCallback(async (url) => {
         const response = await api.delete(url);
         return response.data;
-    };
+    }, [api]);
     return { getApi, postApi, deleteApi }
 }
 

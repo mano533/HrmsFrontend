@@ -391,7 +391,6 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
             onClick={({ key }) => selectNavigation(key)}
           />
         </ConfigProvider>
-
         <nav className="legacy-super-navigation">
           {visibleNavigation.map((item) => (
             <div key={item}>

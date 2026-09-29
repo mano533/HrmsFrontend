@@ -128,7 +128,6 @@ export const renderfields = (field, onchangeHandel, form) => {
     const formValue = form?.getFieldValue(name);
     const currentValue = formValue !== undefined ? formValue : value;
 
-    console.log("renderfields", name, type, label, formValue, currentValue, field);
     switch (type) {
         case "text":
         case "number":

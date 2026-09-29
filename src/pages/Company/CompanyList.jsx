@@ -156,125 +156,125 @@ const sections = [
       ],
     ],
   },
-  {
-    title: "CIT (TDS) Address",
-    columns: [
-      [
-        text("CIT Name", "citName"),
-        text("Address1", "citAddress1"),
-        text("Address2", "citAddress2"),
-      ],
-      [text("City", "citCity"), text("PIN", "citPin")],
-    ],
-  },
-  {
-    title: "Tax Consultant Employee",
-    columns: [
-      [
-        checkbox(
-          "Enable income tax calculation for consultant employees",
-          "incomeTaxConsultant",
-        ),
-        checkbox(
-          "Enable PT calculation for consultant employees",
-          "ptConsultant",
-        ),
-      ],
-      [text("Consultant Rate %", "consultantRate")],
-    ],
-  },
-  {
-    title: "SBI Account Details",
-    columns: [
-      [
-        text("SBI Account No", "sbiAccount"),
-        text("SBI Reference Number", "sbiReference"),
-      ],
-      [text("SBI Code", "sbiCode")],
-    ],
-  },
-  {
-    title: "Invoice Details",
-    columns: [
-      [
-        text("Company VAT TIN", "vatTin"),
-        text("NEFT/RTGS No.", "neft"),
-        text("Branch", "branch"),
-      ],
-      [
-        text("Service Tax No.", "serviceTax"),
-        text("A/C Number No.", "accountNumber"),
-        text("Bank Name", "bankName"),
-      ],
-    ],
-  },
-  {
-    title: "Preference, Permission and Alert Options",
-    columns: [
-      [
-        checkbox("Send email alert to HR", "alertHr"),
-        checkbox("Enable ESS Website For Employees", "essEmployees"),
-        checkbox("Payslip to come with Reimbursement", "payslipReimbursement"),
-        checkbox(
-          "Can only generate PF monthly report, if payroll is locked, salary processed and PF TAT is set",
-          "pfMonthlyReport",
-        ),
-        checkbox(
-          "Allow reimbursement excess transaction claim posting",
-          "excessClaim",
-        ),
-        checkbox(
-          "Consider OnBoarding Group Mandatory for onboarding",
-          "onboardingMandatory",
-        ),
-        checkbox(
-          "Companywise bank Duplicate Account Number Check",
-          "duplicateBank",
-        ),
-        checkbox("LIFA Enabled", "lifa"),
-        checkbox("Leave Bulk Approval", "bulkApproval"),
-      ],
-      [
-        checkbox("Enable employee change request workflow", "changeWorkflow"),
-        checkbox("Employee No. as Username", "employeeUsername", true),
-        checkbox(
-          "Display subclient logo and address in payslip",
-          "subclientPayslip",
-        ),
-        checkbox(
-          "Consider for second level password authentication",
-          "secondLevelAuth",
-        ),
-        checkbox("Payroll Migration", "payrollMigration"),
-        checkbox(
-          "Generate Salary Statement with reimbursement",
-          "salaryReimbursement",
-        ),
-        checkbox("Varthana PMS", "varthanaPms"),
-        checkbox("Enable IT Vouching", "itVouching"),
-      ],
-    ],
-  },
-  {
-    title: "Attachment Limit",
-    columns: [
-      [
-        text("HRMS forms max files", "hrmsMaxFiles"),
-        text("Document center max files", "documentMaxFiles"),
-        text("Bulletin board max files", "bulletinMaxFiles"),
-        text("Pre Onboarding attachment size", "preOnboardingSize"),
-      ],
-      [
-        text("Max size limit (Kbs)", "hrmsMaxSize"),
-        text("Max size limit (Kbs)", "documentMaxSize"),
-        text("Max size limit (Kbs)", "bulletinMaxSize"),
-      ],
-    ],
-  },
-  {
-    title: "CTC Component",
-    columns: [[select("CTC Component", "ctcComponent")], []],
-  },
+  // {
+  //   title: "CIT (TDS) Address",
+  //   columns: [
+  //     [
+  //       text("CIT Name", "citName"),
+  //       text("Address1", "citAddress1"),
+  //       text("Address2", "citAddress2"),
+  //     ],
+  //     [text("City", "citCity"), text("PIN", "citPin")],
+  //   ],
+  // },
+  // {
+  //   title: "Tax Consultant Employee",
+  //   columns: [
+  //     [
+  //       checkbox(
+  //         "Enable income tax calculation for consultant employees",
+  //         "incomeTaxConsultant",
+  //       ),
+  //       checkbox(
+  //         "Enable PT calculation for consultant employees",
+  //         "ptConsultant",
+  //       ),
+  //     ],
+  //     [text("Consultant Rate %", "consultantRate")],
+  //   ],
+  // },
+  // {
+  //   title: "SBI Account Details",
+  //   columns: [
+  //     [
+  //       text("SBI Account No", "sbiAccount"),
+  //       text("SBI Reference Number", "sbiReference"),
+  //     ],
+  //     [text("SBI Code", "sbiCode")],
+  //   ],
+  // },
+  // {
+  //   title: "Invoice Details",
+  //   columns: [
+  //     [
+  //       text("Company VAT TIN", "vatTin"),
+  //       text("NEFT/RTGS No.", "neft"),
+  //       text("Branch", "branch"),
+  //     ],
+  //     [
+  //       text("Service Tax No.", "serviceTax"),
+  //       text("A/C Number No.", "accountNumber"),
+  //       text("Bank Name", "bankName"),
+  //     ],
+  //   ],
+  // },
+  // {
+  //   title: "Preference, Permission and Alert Options",
+  //   columns: [
+  //     [
+  //       checkbox("Send email alert to HR", "alertHr"),
+  //       checkbox("Enable ESS Website For Employees", "essEmployees"),
+  //       checkbox("Payslip to come with Reimbursement", "payslipReimbursement"),
+  //       checkbox(
+  //         "Can only generate PF monthly report, if payroll is locked, salary processed and PF TAT is set",
+  //         "pfMonthlyReport",
+  //       ),
+  //       checkbox(
+  //         "Allow reimbursement excess transaction claim posting",
+  //         "excessClaim",
+  //       ),
+  //       checkbox(
+  //         "Consider OnBoarding Group Mandatory for onboarding",
+  //         "onboardingMandatory",
+  //       ),
+  //       checkbox(
+  //         "Companywise bank Duplicate Account Number Check",
+  //         "duplicateBank",
+  //       ),
+  //       checkbox("LIFA Enabled", "lifa"),
+  //       checkbox("Leave Bulk Approval", "bulkApproval"),
+  //     ],
+  //     [
+  //       checkbox("Enable employee change request workflow", "changeWorkflow"),
+  //       checkbox("Employee No. as Username", "employeeUsername", true),
+  //       checkbox(
+  //         "Display subclient logo and address in payslip",
+  //         "subclientPayslip",
+  //       ),
+  //       checkbox(
+  //         "Consider for second level password authentication",
+  //         "secondLevelAuth",
+  //       ),
+  //       checkbox("Payroll Migration", "payrollMigration"),
+  //       checkbox(
+  //         "Generate Salary Statement with reimbursement",
+  //         "salaryReimbursement",
+  //       ),
+  //       checkbox("Varthana PMS", "varthanaPms"),
+  //       checkbox("Enable IT Vouching", "itVouching"),
+  //     ],
+  //   ],
+  // },
+  // {
+  //   title: "Attachment Limit",
+  //   columns: [
+  //     [
+  //       text("HRMS forms max files", "hrmsMaxFiles"),
+  //       text("Document center max files", "documentMaxFiles"),
+  //       text("Bulletin board max files", "bulletinMaxFiles"),
+  //       text("Pre Onboarding attachment size", "preOnboardingSize"),
+  //     ],
+  //     [
+  //       text("Max size limit (Kbs)", "hrmsMaxSize"),
+  //       text("Max size limit (Kbs)", "documentMaxSize"),
+  //       text("Max size limit (Kbs)", "bulletinMaxSize"),
+  //     ],
+  //   ],
+  // },
+  // {
+  //   title: "CTC Component",
+  //   columns: [[select("CTC Component", "ctcComponent")], []],
+  // },
   {
     title: "Leave, Attendance and Permission Configuration",
     columns: [
