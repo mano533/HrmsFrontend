@@ -1,8 +1,8 @@
 import axios from "axios";
 import { env } from "../constant/constant";
-import AdminDashboard from "../pages/AdminPageDetails/AdminDashboard"
-import EmployeeList from "../pages/AdminPageDetails/EmployeeList"
-import NewJoiners from "../pages/AdminPageDetails/NewJoiners"
+import AdminDashboard from "../pages/AdminPage/AdminDashboard"
+import EmployeeList from "../pages/AdminPage/EmployeeList"
+import NewJoiners from "../pages/AdminPage/NewJoiners"
 import DynamicPage from "../reuseableComponents/DynamicPage"
 
 export const getAdminComponent = (AdminComponent) => {

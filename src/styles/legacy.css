@@ -2871,8 +2871,12 @@ body {
   align-items: center;
   gap: 12px;
 }
-.admin-company-switcher {
+.admin-company-switcher-wrap {
+  position: relative;
   min-width: 220px;
+}
+.admin-company-switcher {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2886,7 +2890,11 @@ body {
 .admin-company-switcher:hover {
   border-color: #10a6a0;
 }
-.admin-company-switcher.deputed .admin-company-icon {
+.admin-company-switcher.is-open {
+  border-color: #10a6a0;
+  box-shadow: 0 0 0 3px rgba(16, 166, 160, 0.1);
+}
+.admin-company-switcher-wrap.deputed .admin-company-icon {
   color: #7354d9;
   background: #f1edff;
 }
@@ -2934,6 +2942,67 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.admin-company-popup {
+  position: absolute;
+  z-index: 1200;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  min-width: 260px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(24, 39, 75, 0.16);
+}
+.admin-company-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 10px;
+  border: 1px solid #dfe7ef;
+  border-radius: 7px;
+  outline: none;
+  color: #17202a;
+  font-size: 12px;
+}
+.admin-company-search:focus {
+  border-color: #10a6a0;
+  box-shadow: 0 0 0 3px rgba(16, 166, 160, 0.1);
+}
+.admin-company-options {
+  max-height: 220px;
+  margin-top: 6px;
+  overflow-y: auto;
+}
+.admin-company-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #263548;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+}
+.admin-company-option:hover,
+.admin-company-option.selected {
+  background: #effaf9;
+  color: #087e79;
+}
+.admin-company-option.selected {
+  font-weight: 600;
+}
+.admin-company-empty {
+  padding: 14px 10px;
+  color: #718096;
+  font-size: 12px;
+  text-align: center;
 }
 .admin-company-chevron {
   color: #718096;
@@ -3139,6 +3208,73 @@ body {
   > .ant-menu-submenu-title {
   background: #e6f7f5 !important;
   color: #10a6a0 !important;
+}
+
+/* Compact accordion navigation: highlight the current page, not every parent. */
+.super-sidebar > .ant-menu .ant-menu-item,
+.super-sidebar > .ant-menu .ant-menu-submenu-title {
+  min-height: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 3px 6px;
+  padding-inline: 14px !important;
+  border-radius: 9px;
+  color: #123b4a !important;
+  background: transparent !important;
+  transition: background 0.16s ease, color 0.16s ease;
+}
+.super-sidebar > .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title {
+  min-height: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 8px 6px 10px;
+  background: #e6f7f5 !important;
+  color: #087e79 !important;
+  font-size: 18px;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-item,
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-submenu-title {
+  margin-block: 2px;
+  font-size: 15px;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-item {
+  padding-left: 28px !important;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-submenu-title {
+  padding-left: 28px !important;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-item:hover,
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-submenu-title:hover {
+  background: #f0fbfa !important;
+  color: #087e79 !important;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-item-selected {
+  position: relative;
+  background: #f0fbfa !important;
+  color: #087e79 !important;
+  font-weight: 600;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-item-selected::before {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 3px;
+  background: #10a6a0;
+  content: "";
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-submenu-selected > .ant-menu-submenu-title {
+  background: transparent !important;
+  color: #123b4a !important;
+  font-weight: 600;
+}
+.super-sidebar > .ant-menu .ant-menu-sub .ant-menu-submenu-selected > .ant-menu-submenu-title:hover {
+  background: #f0fbfa !important;
+  color: #087e79 !important;
+}
+.super-sidebar > .ant-menu .ant-menu-submenu-arrow {
+  color: currentColor;
 }
 
 .super-tabs .ant-btn,
@@ -3432,7 +3568,7 @@ body {
 }
 
 @media (max-width: 850px) {
-  .admin-company-switcher {
+  .admin-company-switcher-wrap {
     min-width: 150px;
   }
   .admin-company-switchers {
@@ -3445,7 +3581,7 @@ body {
     order: 3;
     width: 100%;
   }
-  .admin-company-switcher {
+  .admin-company-switcher-wrap {
     min-width: 0;
     width: auto;
     flex: 1;

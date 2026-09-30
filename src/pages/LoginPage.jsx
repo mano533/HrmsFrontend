@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import DynamicForm from "../reuseableComponents/DynamicForm";
 import ButtonComponent from "../reuseableComponents/ButtonComponent";
 import jsonData from "../data/jsonData.json";
-import { userDetailsData } from "../Redux/features/userSlice";
+import { selectdropdownDetailsData, userDetailsData } from "../Redux/features/userSlice";
 import useApiServices from "../Services/ApiServices";
 import { useDispatch } from "react-redux";
 import { generateToken } from "../data/generalFiles";
@@ -33,12 +33,17 @@ function LoginPage() {
       await generateToken();
       const params = { username: values.username, password: values.password };
       const loginResponse = await postApi(
-        "AuthControllers/ValidateToken",
+        "api/AuthControllers/ValidateToken",
         params,
       );
       console.log("Login Response:", loginResponse);
+
       //Save login details in Redux
       dispatch(userDetailsData(loginResponse));
+      dispatch(selectdropdownDetailsData({
+        selectedCompany: loginResponse.company,
+        selectedDeputyCompany: loginResponse.deputyCompany
+      }));
       // Navigate based on role
       if (Number(loginResponse?.isSuperAdmin) === 1) {
         navigate("/super-admin");

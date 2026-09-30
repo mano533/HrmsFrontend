@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoginPage from "./pages/LoginPage";
-import EmployeeDashboard from "./pages/EmployeeDashboard";
-import AdministrationPage from "./pages/AdministrationPage";
-import SuperAdminDashboard from "./pages/SuperAdminDashboard";
+import EmployeeDashboard from "./pages/EmployeePage/EmployeeDashboard";
+import AdministrationPage from "./pages/AdminPage/AdministrationPage";
+import SuperAdminDashboard from "./pages/SuperAdminPage/SuperAdminDashboard";
 // Role Route
 const RoleRoute = ({ type, children }) => {
   const account = useSelector((state) => state?.userDetails?.userData);

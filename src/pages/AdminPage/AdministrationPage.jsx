@@ -8,11 +8,11 @@ import {
 } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 
-import InputComponent from "../reuseableComponents/InputComponent";
-import ButtonComponent from "../reuseableComponents/ButtonComponent";
-import { sidebarMenus } from "../reuseableComponents/SidebarComponent";
-import DynamicIconComponent from "../reuseableComponents/IconComponent";
-import { getAdminComponent } from "../data/generalFiles";
+import InputComponent from "../../reuseableComponents/InputComponent";
+import ButtonComponent from "../../reuseableComponents/ButtonComponent";
+import { sidebarMenus } from "../../reuseableComponents/SidebarComponent";
+import DynamicIconComponent from "../../reuseableComponents/IconComponent";
+import { getAdminComponent } from "../../data/generalFiles";
 
 function AdministrationPage({ user, onLogout }) {
   const [activeKey, setActiveKey] = useState("Dashboard");

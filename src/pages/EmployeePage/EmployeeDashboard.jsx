@@ -1,10 +1,10 @@
 import { useState } from "react";
-import jsonData from "../data/jsonData.json";
-import ButtonComponent from "../reuseableComponents/ButtonComponent";
-import { sidebarMenus } from "../reuseableComponents/SidebarComponent";
+import jsonData from "../../data/jsonData.json";
+import ButtonComponent from "../../reuseableComponents/ButtonComponent";
+import { sidebarMenus } from "../../reuseableComponents/SidebarComponent";
 import { ConfigProvider, Menu } from "antd";
-import DynamicIconComponent from "../reuseableComponents/IconComponent";
-import DynamicPage from "../reuseableComponents/DynamicPage";
+import DynamicIconComponent from "../../reuseableComponents/IconComponent";
+import DynamicPage from "../../reuseableComponents/DynamicPage";
 
 const employeeNav = sidebarMenus.employee.items;
 console.log("employeeNav", employeeNav);

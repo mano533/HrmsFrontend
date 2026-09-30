@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userDataReducer from "./features/userSlice";
+import {
+  selectdropdownDetailsReducer,
+  userDetailsReducer,
+} from "./features/userSlice";
 
 export const store = configureStore({
   reducer: {
-    userDetails: userDataReducer,
+    userDetails: userDetailsReducer,
+    selectDropdown: selectdropdownDetailsReducer,
   },
 });

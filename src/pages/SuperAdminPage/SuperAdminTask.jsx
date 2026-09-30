@@ -1,6 +1,6 @@
-import jsonData from "../data/jsonData.json";
-import ButtonComponent from "../reuseableComponents/ButtonComponent";
-import InputComponent from "../reuseableComponents/InputComponent";
+import jsonData from "../../data/jsonData.json";
+import ButtonComponent from "../../reuseableComponents/ButtonComponent";
+import InputComponent from "../../reuseableComponents/InputComponent";
 
 const iconMap = {
   checklist: "✓",

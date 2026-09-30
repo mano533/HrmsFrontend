@@ -1,15 +1,98 @@
-import { useEffect, useState } from "react";
-import jsonData from "../data/jsonData.json";
+import { useEffect, useRef, useState } from "react";
+import jsonData from "../../data/jsonData.json";
 import SuperAdminAdministration from "./SuperAdminAdministration";
 import SuperAdminTask from "./SuperAdminTask";
-import CompanyList from "./Company/CompanyList";
-import NewDeputedCompany from "./DeputedCompany/NewDeputedCompany";
-import InputComponent from "../reuseableComponents/InputComponent";
-import ButtonComponent from "../reuseableComponents/ButtonComponent";
-import { sidebarMenus } from "../reuseableComponents/SidebarComponent";
+import CompanyList from "./CompanyList";
+import NewDeputedCompany from "./NewDeputedCompany";
+import InputComponent from "../../reuseableComponents/InputComponent";
+import ButtonComponent from "../../reuseableComponents/ButtonComponent";
+import { sidebarMenus } from "../../reuseableComponents/SidebarComponent";
 import { ConfigProvider, Menu } from "antd";
-import DynamicPage from "../reuseableComponents/DynamicPage";
-import DynamicIconComponent from "../reuseableComponents/IconComponent";
+import { useSelector, useDispatch } from "react-redux";
+import DynamicPage from "../../reuseableComponents/DynamicPage";
+import DynamicIconComponent from "../../reuseableComponents/IconComponent";
+
+const getCompanyLabel = (item) => {
+  if (typeof item === "string") return item;
+  return item?.int_CompanyName || item?.CompanyName || item?.SubClientName || item?.DeputyCompanyName || item?.name || "Unnamed company";
+};
+
+const getCompanyId = (item, index) => {
+  if (typeof item === "string") return item;
+  return item?.int_CompanyId ?? item?.CompanyId ?? item?.DeputyCompanyId ?? item?.id ?? index;
+};
+
+function CompanySwitcher({ icon, label, items = [], value, onChange, deputed = false }) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const wrapperRef = useRef(null);
+  const options = items.length ? items : ["Airbase Labs India Private Limited", "ABCD Company"];
+  const selected = options.find((item) => String(getCompanyId(item, options.indexOf(item))) === String(value)) || options.find((item) => getCompanyLabel(item) === value) || options[0];
+  const filteredOptions = options.filter((item) => getCompanyLabel(item).toLowerCase().includes(search.toLowerCase()));
+
+  useEffect(() => {
+    const closeOnOutsideClick = (event) => {
+      if (!wrapperRef.current?.contains(event.target)) setOpen(false);
+    };
+    document.addEventListener("mousedown", closeOnOutsideClick);
+    return () => document.removeEventListener("mousedown", closeOnOutsideClick);
+  }, []);
+
+  return (
+    <div className={`admin-company-switcher-wrap ${deputed ? "deputed" : ""}`} ref={wrapperRef}>
+      <button
+        type="button"
+        className={`admin-company-switcher ${open ? "is-open" : ""}`}
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        onClick={() => setOpen((current) => !current)}
+      >
+        <span className="admin-company-icon" aria-hidden="true">{icon}</span>
+        <span className="admin-company-copy">
+          <small>{label}</small>
+          <strong title={getCompanyLabel(selected)}>{getCompanyLabel(selected)}</strong>
+        </span>
+        <span className="admin-company-chevron" aria-hidden="true">⌄</span>
+      </button>
+      {open && (
+        <div className="admin-company-popup" role="listbox" aria-label={`${label} options`}>
+          <input
+            autoFocus
+            className="admin-company-search"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder={`Search ${label.toLowerCase()}...`}
+            aria-label={`Search ${label}`}
+          />
+          <div className="admin-company-options">
+            {filteredOptions.length ? filteredOptions.map((item, index) => {
+              const itemId = getCompanyId(item, index);
+              const itemLabel = getCompanyLabel(item);
+              const isSelected = String(itemId) === String(value) || itemLabel === getCompanyLabel(selected);
+              return (
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={isSelected}
+                  className={`admin-company-option ${isSelected ? "selected" : ""}`}
+                  key={`${itemId}-${itemLabel}`}
+                  onClick={() => {
+                    onChange(itemId, item);
+                    setOpen(false);
+                    setSearch("");
+                  }}
+                >
+                  <span>{itemLabel}</span>
+                  {isSelected && <span aria-hidden="true">✓</span>}
+                </button>
+              );
+            }) : <div className="admin-company-empty">No companies found</div>}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 const iconMap = {
   people: "●",
@@ -40,7 +123,9 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
   const [active, setActive] = useState("Administration");
   const [search, setSearch] = useState("");
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [administrationOpen, setAdministrationOpen] = useState(false);
+  // Administration is the primary workspace section and stays expanded.
+  const [administrationOpen, setAdministrationOpen] = useState(true);
+  const [sidebarOpenKeys, setSidebarOpenKeys] = useState(["Administration"]);
   const [taskOpen, setTaskOpen] = useState(false);
   const [reportsOpen, setReportsOpen] = useState(true);
   const [systemOpen, setSystemOpen] = useState(false);
@@ -52,8 +137,11 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
   const [expandedManage, setExpandedManage] = useState({});
   const [homeTab, setHomeTab] = useState("Welcome");
   const [quickView, setQuickView] = useState("grid");
+  const companyDetails = useSelector((state) => state.selectDropdown);
   const [selectedCompany, setSelectedCompany] = useState("Airbase Labs India Private Limited");
   const [selectedDeputedCompany, setSelectedDeputedCompany] = useState("Airbase Labs India Private Limited");
+  const companyOptions = companyDetails?.SelectCompanyDropDownList || [];
+  const deputedCompanyOptions = companyDetails?.SelectDeputyCompanyDropDownList || [];
   const data = jsonData.superAdminDashboard;
   const navigation = sidebarMenus.superAdmin.main;
   const currentUser = jsonData.users.find((user) => user.role === role) || {
@@ -141,7 +229,10 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
   );
 
   useEffect(() => {
-    setAdministrationOpen(administrationActive);
+    setAdministrationOpen(true);
+    setSidebarOpenKeys((current) =>
+      current.includes("Administration") ? current : [...current, "Administration"],
+    );
     setTaskOpen(taskActive);
     setSystemOpen(systemActive);
     if (!administrationActive) {
@@ -388,6 +479,12 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
             mode="inline"
             items={sidebarMenuItems}
             selectedKeys={[active]}
+            openKeys={administrationActive
+              ? Array.from(new Set([...sidebarOpenKeys, "Administration"]))
+              : sidebarOpenKeys}
+            onOpenChange={(keys) =>
+              setSidebarOpenKeys(Array.from(new Set([...keys, "Administration"])))
+            }
             onClick={({ key }) => selectNavigation(key)}
           />
         </ConfigProvider>
@@ -398,8 +495,8 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
                 type="button"
                 className="active"
                 onclickButton={() =>
-                  item === "Administration"
-                    ? setAdministrationOpen((open) => !open)
+                    item === "Administration"
+                    ? selectNavigation(item)
                     : item === "Task"
                       ? setTaskOpen((open) => !open)
                       : item === "Reports"
@@ -608,28 +705,21 @@ function SuperAdminDashboard({ onLogout, role = "Super Admin" }) {
             </ButtonComponent>
             {role === "Admin" || role === "Super Admin" && (
               <div className="admin-company-switchers" aria-label="Company selection">
-                <label className="admin-company-switcher">
-                  <span className="admin-company-icon" aria-hidden="true">♙</span>
-                  <span className="admin-company-copy">
-                    <small>Company</small>
-                    <select aria-label="Company" value={selectedCompany} onChange={(event) => setSelectedCompany(event.target.value)}>
-                      <option>Airbase Labs India Private Limited</option>
-                      <option>ABCD Company</option>
-                    </select>
-                  </span>
-                  <span className="admin-company-chevron" aria-hidden="true">⌄</span>
-                </label>
-                <label className="admin-company-switcher deputed">
-                  <span className="admin-company-icon" aria-hidden="true">♧</span>
-                  <span className="admin-company-copy">
-                    <small>Deputed Company</small>
-                    <select aria-label="Deputed Company" value={selectedDeputedCompany} onChange={(event) => setSelectedDeputedCompany(event.target.value)}>
-                      <option>Airbase Labs India Private Limited</option>
-                      <option>ABCD Company</option>
-                    </select>
-                  </span>
-                  <span className="admin-company-chevron" aria-hidden="true">⌄</span>
-                </label>
+                <CompanySwitcher
+                  icon="♙"
+                  label="Company"
+                  items={companyOptions}
+                  value={selectedCompany}
+                  onChange={(_, item) => setSelectedCompany(getCompanyLabel(item))}
+                />
+                <CompanySwitcher
+                  icon="♧"
+                  label="Deputed Company"
+                  items={deputedCompanyOptions}
+                  value={selectedDeputedCompany}
+                  deputed
+                  onChange={(_, item) => setSelectedDeputedCompany(getCompanyLabel(item))}
+                />
               </div>
             )}
           </div>

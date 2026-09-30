@@ -692,7 +692,6 @@
     {
       "label": "Employee",
       "children": [
-        "Request For Pre Onboarding",
         "On Boarding List",
         "New Employee",
         "Employee List",

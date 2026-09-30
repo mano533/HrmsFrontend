@@ -11,7 +11,23 @@ const userDetailsSlice = createSlice({
     },
   },
 });
+const selectdropdownDetailsSlice = createSlice({
+  name: "SelectDropDown",
+  initialState: {
+    SelectCompanyDropDownList: [],
+    SelectDeputyCompanyDropDownList: [],
+  },
+  reducers: {
+    selectdropdownDetailsData: (state, action) => {
+      state.SelectCompanyDropDownList = action.payload.selectedCompany;
+      state.SelectDeputyCompanyDropDownList =
+        action.payload.selectedDeputyCompany;
+    },
+  },
+});
 
 export const { userDetailsData } = userDetailsSlice.actions;
+export const { selectdropdownDetailsData } = selectdropdownDetailsSlice.actions;
 
-export default userDetailsSlice.reducer;
+export const userDetailsReducer = userDetailsSlice.reducer;
+export const selectdropdownDetailsReducer = selectdropdownDetailsSlice.reducer;
